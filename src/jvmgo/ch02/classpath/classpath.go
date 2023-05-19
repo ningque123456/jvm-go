@@ -12,7 +12,8 @@ type Classpath struct {
 }
 
 func Parse(jreOption, cpOption string) *Classpath {
-	var cp *Classpath
+	//cp := &Classpath{}
+	cp := new(Classpath)
 	cp.parseBootAndExtClasspath(jreOption)
 	cp.parseUserClasspath(cpOption)
 	return cp
